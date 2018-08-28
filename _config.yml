@@ -1,3 +1,23 @@
-name: Memory Resident
+title: Memory Resident
+email: yzure.chen@gmail.com
+description: >-
+  ijoyc's blog
+permalink: date
+github_username: ijoyc
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
