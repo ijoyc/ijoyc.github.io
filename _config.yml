@@ -1,2 +1,3 @@
 name: Memory Resident
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
