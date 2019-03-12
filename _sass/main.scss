@@ -31,6 +31,11 @@ pre {
 
 
 
+.profile-image {
+  width: 40px;
+  height: 40px;
+}
+
 .content {
   margin-top: 90px;
 }
@@ -73,6 +78,19 @@ pre {
   color: white;
 }
 
+
+.archive-list {
+  list-style: none;
+}
+
+.archive-list-item {
+  margin-bottom: 6px;
+}
+
+.archive-list-item .time {
+  color: #999;
+  margin-right: 20px;
+}
 
 .footer-list {
   display: flex;
