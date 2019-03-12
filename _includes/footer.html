@@ -1,0 +1,15 @@
+<footer class="fixed-bottom">
+  <div class="container">
+    <ul class="footer-list">
+      <li>自豪地采用自己做的博客系统</li>
+      <li>with the help of <a href="#">Bootstrap</a> & <a href="#">Jekyll</a> & <a href="#">GitHub Pages</a></li>
+      <li>© 2019 • <a href="https://github.com/{{site.github_username}}">Joy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+{% if jekyll.environment == "production" %}
+  {% include analytics.html %}
+{% endif %}

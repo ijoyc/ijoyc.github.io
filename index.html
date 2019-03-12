@@ -3,7 +3,20 @@ layout: default
 title: Memory Resident
 ---
 
-<div class="blurb">
-	<h1>Hi there, I'm ijoyc!</h1>
-</div>
+{% for post in site.posts %}
+	<article class="row post">
+		<h2 class="post-title">{{ post.title }}</h2>
+		<!-- <div class="post-excerpt">{% if post.description %} <p>{{ post.description }}</p> {% else %} {{ post.excerpt}} {% endif %}</div> -->
+		<div>{{ post.content }}</div>
+		<div class="post-infos">
+				<span class="post-date">{{ post.date | date_to_string }}</span>
+				<ul class="post-categories">
+					{% for category in post.categories %}
+						<li class="post-category-item"><a href="#">{{ category }}</a></li>
+					{% endfor %}
+				</ul>
+		</div>
+	</article>
+{% endfor %}	
+
 		
