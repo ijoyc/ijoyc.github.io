@@ -2,6 +2,12 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
+body {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
 a, a:hover {
   text-decoration: none;
 }
@@ -29,6 +35,48 @@ pre {
   padding: 2em;
 }
 
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+table th, table td {
+  padding: .75rem;
+  border-top: 1px solid #dee2e6;
+}
+
+table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+blockquote {
+  color: #aaa;
+  padding-left: 10px;
+  border-left: 1px dotted #666;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+.highlight {
+  color: #d0d0d0;
+}
+
+nav[data-toggle="toc"] {
+  top: 150px;
+}
+
 
 
 .profile-image {
@@ -38,6 +86,7 @@ pre {
 
 .content {
   margin-top: 90px;
+  min-height: calc(100vh - 180px);
 }
 
 .post {
@@ -78,6 +127,16 @@ pre {
   color: white;
 }
 
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    line-height: 1.5;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+}
+
 
 .archive-list {
   list-style: none;
@@ -90,6 +149,15 @@ pre {
 .archive-list-item .time {
   color: #999;
   margin-right: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.anchor-offset {
+  position: relative;
+  top: -80px;
 }
 
 .footer-list {

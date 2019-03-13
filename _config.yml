@@ -25,6 +25,12 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

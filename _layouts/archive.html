@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="row">
+  
+		<div class="archive col-8">
+			<ul class="archive-list">
+        {% if page.posts.size %}
+          {% assign posts = page.posts %}
+          {% assign showAll = false %}
+        {% else %}
+          {% assign posts = site.posts %}
+          {% assign showAll = true %}
+        {% endif %}
+				{% for post in posts %}
+					{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+					{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+		
+					{% if forloop.first %}
+						<h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
+						<ul>
+					{% endif %}
+		
+						<li class="archive-list-item"><span class="time">{{ post.date | date: "%b %d" }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+		
+					{% if forloop.last %}
+						</ul>
+					{% else %}
+						{% if this_year != next_year %}
+							</ul>
+							<h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+							<ul>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="arch-cate-wrapper col-4">
+			<h4 class="mb-3">Category</h4>
+			<div class="list-group">
+				<a href="/blog.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center lh-condensed {% if showAll %} active {% endif %}">
+          <h6 class="my-0">All</h6>
+					<span class="badge badge-pill badge-secondary">{{ site.posts | size }}</span>
+				</a>
+				{% for category in site.categories %}
+				{% capture cateName %}{{ category | first }}{% endcapture %}
+					<a href="{{ site.url }}/category/{{ cateName }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center lh-condensed {% if page.title == cateName %} active {% endif %}">
+						<h6 class="my-0">{{ category | first }}</h6>
+						<span class="badge badge-pill badge-secondary">{{ site.categories[cateName] | size }}</span>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+
+</div>
